@@ -13,3 +13,6 @@ class LoginPageLocators():
     EMAIL_LOGIN = (By.NAME, "login-username")
     PASSWORD_LOGIN = (By.NAME, "login-password")
     LOGIN_SUBMIT = (By.NAME, "login_submit")
+
+class ProductPageLocators():
+    BASKET_BUTTON = (By.CLASS_NAME, "btn-add-to-basket")
