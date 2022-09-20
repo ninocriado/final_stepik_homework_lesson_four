@@ -16,3 +16,9 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     BASKET_BUTTON = (By.CLASS_NAME, "btn-add-to-basket")
+    BOOK_NAME = (By.TAG_NAME, "h1")
+    BOOK_PRICE = (By.CLASS_NAME, "price_color")
+    BOOK_PRICE_IN_BASKET = (By.CLASS_NAME, "visible-xs-inline-block")
+    BOOK_NAME_IN_BASKET = (By.CSS_SELECTOR, "[id='messages']>div:nth-child(1)>div>strong")
+
+
