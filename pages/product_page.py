@@ -23,3 +23,10 @@ class ProductPage(BasePage):
         assert book_name_basket, "Book name in basket is not present"
         assert book_name.text == book_name_basket.text, "Book name not matched"
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def should_not_be_disappeared_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
