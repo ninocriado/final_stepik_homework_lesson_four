@@ -21,3 +21,9 @@ class LoginPage(BasePage):
         assert self.is_element_present(*LoginPageLocators.PASSWORD1_REGISTRATION), "Password field is not present"
         assert self.is_element_present(*LoginPageLocators.PASSWORD2_REGISTRATION), "Password field is not present"
         assert self.is_element_present(*LoginPageLocators.BUTTON_REGISTRATION), "Button registration is not present"
+
+    def register_new_user(self, email, password):
+        self.browser.find_element(*LoginPageLocators.EMAIL_REGISTRATION).send_keys(email)
+        self.browser.find_element(*LoginPageLocators.PASSWORD1_REGISTRATION).send_keys(password)
+        self.browser.find_element(*LoginPageLocators.PASSWORD2_REGISTRATION).send_keys(password)
+        self.browser.find_element(*LoginPageLocators.BUTTON_REGISTRATION).click()
