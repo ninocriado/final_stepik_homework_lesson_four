@@ -5,10 +5,12 @@ from .base_page import BasePage
 
 class ProductPage(BasePage):
     def button_add_basket(self):
-        time.sleep(10)
         self.browser.find_element(*ProductPageLocators.BASKET_BUTTON).click()
-        #self.solve_quiz_and_get_code()
-        time.sleep(10)
+        self.solve_quiz_and_get_code()
+
+    def button_add_basket_without_code(self):
+        self.browser.find_element(*ProductPageLocators.BASKET_BUTTON).click()
+
     def should_be_price_on_the_page(self):
         book_price = self.browser.find_element(*ProductPageLocators.BOOK_PRICE)
         assert book_price, "Price is not present"
